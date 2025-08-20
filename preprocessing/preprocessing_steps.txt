@@ -1,0 +1,21 @@
+Steps to generate the final unified and trimmed Datasets:
+
+# Note: For all of the following steps, make sure the correct paths are used and the relevant directories exist
+# Note: It migth be necessary to convert the encoding of some of the datasets, use 'convert_encoding.py' for this if needed
+
+0. Download the metacritic-critic-review dataset and add it to the folder 'original_datasets/slow' (https://www.kaggle.com/datasets/skateddu/metacritic-critic-games-reviews-20112019)
+0.5 Make sure all datasets exist in a folder 'original_datasets'
+    - If other datasets are used or some are missing, filepaths might need to be changed in some of the following scripts
+1. Unify column labels for texts and sentiments (manually)
+	- 'text'
+	- 'sentiment'
+2. Execute 'harmonize_data/rating_to_percentage' (make sure to use the correct paths)
+3. Execute 'harmonize_data/identify_class_breakpoints.py'
+4. Save the breakpoints, set them in 'harmonize_data/percentage_to_sentiment.py' and execute this script
+5. Execute 'harmonize_data/sentiment_text_to_number.py' (make sure to use the correct paths)
+6. Copy the fast datasets into the 'labeld_data' folder
+7. Execute 'clean_text/create_subsets.py'
+8. Execute 'clean_text/clean_text.py'
+9. Execute 'noise_class-imbalance_no-paraphrasing.py'
+10. Execute 'unify_datasets.py'
+11. Execute 'remove_unnecessary_columns.py'
