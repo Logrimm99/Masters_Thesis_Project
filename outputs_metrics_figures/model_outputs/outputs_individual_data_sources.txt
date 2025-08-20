@@ -1,0 +1,188 @@
+Vader Fast:
+
+Using manually set thresholds: pos ≥ 0.05, neg ≤ -0.05
+Inference runtime (eval set): 0.92 seconds
+Total runtime: 1.01 seconds
+
+
+Vader Medium-Fast:
+
+Using manually set thresholds: pos ≥ 0.05, neg ≤ -0.05
+Inference runtime (eval set): 2.86 seconds
+Total runtime: 2.99 seconds
+
+
+Vader Slow:
+
+Using manually set thresholds: pos ≥ 0.05, neg ≤ -0.05
+Inference runtime (eval set): 2.45 seconds
+Total runtime: 2.60 seconds
+
+
+
+Logistic Regression Fast:
+
+Using manually set best parameters: {'logreg__C': 1, 'logreg__penalty': 'l2', 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+Training time: 0.82 seconds
+Testing time: 0.04 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.69      0.70      0.70      1200
+           1       0.62      0.57      0.59      1200
+           2       0.74      0.78      0.76      1200
+
+    accuracy                           0.68      3600
+   macro avg       0.68      0.68      0.68      3600
+weighted avg       0.68      0.68      0.68      3600
+
+
+Logistic Regression Medium-Fast:
+
+Using manually set best parameters: {'logreg__C': 1, 'logreg__penalty': 'l2', 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+Training time: 1.91 seconds
+Testing time: 0.09 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.75      0.82      0.78      1200
+           1       0.59      0.51      0.55      1200
+           2       0.68      0.70      0.69      1200
+
+    accuracy                           0.68      3600
+   macro avg       0.67      0.68      0.67      3600
+weighted avg       0.67      0.68      0.67      3600
+
+
+Logistic Regression Slow:
+
+Using manually set best parameters: {'logreg__C': 1, 'logreg__penalty': 'l2', 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+Training time: 1.95 seconds
+Testing time: 0.12 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.62      0.64      0.63      1200
+           1       0.48      0.45      0.46      1200
+           2       0.61      0.62      0.62      1200
+
+    accuracy                           0.57      3600
+   macro avg       0.57      0.57      0.57      3600
+weighted avg       0.57      0.57      0.57      3600
+
+
+
+BERT Fast:
+
+2025-08-10 14:57:10.440501: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-08-10 14:57:10.459910: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1754837830.481819   42342 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1754837830.488528   42342 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1754837830.505325   42342 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754837830.505351   42342 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754837830.505354   42342 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754837830.505357   42342 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-08-10 14:57:10.510210: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+I0000 00:00:1754837842.616670   42342 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38546 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:00:04.0, compute capability: 8.0
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_projector.bias', 'vocab_transform.bias', 'vocab_layer_norm.bias', 'vocab_projector.weight', 'vocab_transform.weight', 'vocab_layer_norm.weight']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+Epoch 1/5
+I0000 00:00:1754837851.439160   42461 cuda_dnn.cc:529] Loaded cuDNN version 90300
+360/360 ━━━━━━━━━━━━━━━━━━━━ 47s 112ms/step - accuracy: 0.4158 - loss: 1.0758 - val_accuracy: 0.5868 - val_loss: 0.9030
+Epoch 2/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.5867 - loss: 0.8908 - val_accuracy: 0.6170 - val_loss: 0.8394
+Epoch 3/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.6176 - loss: 0.8344 - val_accuracy: 0.6226 - val_loss: 0.8301
+Epoch 4/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.6581 - loss: 0.7917 - val_accuracy: 0.6330 - val_loss: 0.8141
+Epoch 5/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.6546 - loss: 0.7897 - val_accuracy: 0.6465 - val_loss: 0.8071
+Training time: 202.75 seconds
+113/113 ━━━━━━━━━━━━━━━━━━━━ 11s 88ms/step
+Testing time: 11.19 seconds
+Results saved to '../model_predictions/fast/bert_output.csv'
+
+
+BERT Medium-Fast:
+
+2025-08-10 15:08:49.118419: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-08-10 15:08:49.137585: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1754838529.158988   45899 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1754838529.165525   45899 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1754838529.182024   45899 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754838529.182049   45899 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754838529.182052   45899 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754838529.182054   45899 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-08-10 15:08:49.186887: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+I0000 00:00:1754838544.549771   45899 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38546 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:00:04.0, compute capability: 8.0
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_projector.weight', 'vocab_transform.bias', 'vocab_layer_norm.weight', 'vocab_layer_norm.bias', 'vocab_transform.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+Epoch 1/5
+I0000 00:00:1754838554.261240   46036 cuda_dnn.cc:529] Loaded cuDNN version 90300
+360/360 ━━━━━━━━━━━━━━━━━━━━ 46s 111ms/step - accuracy: 0.4541 - loss: 1.0369 - val_accuracy: 0.6104 - val_loss: 0.8299
+Epoch 2/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.6005 - loss: 0.8415 - val_accuracy: 0.6347 - val_loss: 0.7823
+Epoch 3/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.6262 - loss: 0.7986 - val_accuracy: 0.6351 - val_loss: 0.7657
+Epoch 4/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.6388 - loss: 0.7773 - val_accuracy: 0.6451 - val_loss: 0.7626
+Epoch 5/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.6538 - loss: 0.7538 - val_accuracy: 0.6542 - val_loss: 0.7472
+Training time: 202.08 seconds
+113/113 ━━━━━━━━━━━━━━━━━━━━ 11s 88ms/step
+Testing time: 11.17 seconds
+Results saved to '../model_predictions/mediumFast/bert_output.csv'
+
+
+BERT Slow:
+
+2025-08-10 15:13:35.393963: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-08-10 15:13:35.412889: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1754838815.434232   47692 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1754838815.440693   47692 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1754838815.457285   47692 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754838815.457313   47692 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754838815.457316   47692 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754838815.457319   47692 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-08-10 15:13:35.462206: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+I0000 00:00:1754838830.888469   47692 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38546 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:00:04.0, compute capability: 8.0
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_projector.bias', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_layer_norm.bias', 'vocab_layer_norm.weight']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+Epoch 1/5
+I0000 00:00:1754838840.689222   47820 cuda_dnn.cc:529] Loaded cuDNN version 90300
+360/360 ━━━━━━━━━━━━━━━━━━━━ 47s 111ms/step - accuracy: 0.3632 - loss: 1.1094 - val_accuracy: 0.4743 - val_loss: 1.0352
+Epoch 2/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.4654 - loss: 1.0271 - val_accuracy: 0.5184 - val_loss: 0.9725
+Epoch 3/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.4942 - loss: 0.9852 - val_accuracy: 0.5299 - val_loss: 0.9558
+Epoch 4/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.5157 - loss: 0.9659 - val_accuracy: 0.5184 - val_loss: 0.9641
+Epoch 5/5
+360/360 ━━━━━━━━━━━━━━━━━━━━ 39s 108ms/step - accuracy: 0.5319 - loss: 0.9403 - val_accuracy: 0.5278 - val_loss: 0.9469
+Training time: 201.75 seconds
+113/113 ━━━━━━━━━━━━━━━━━━━━ 11s 87ms/step
+Testing time: 11.03 seconds
+Results saved to '../model_predictions/slow/bert_output.csv'
+
+

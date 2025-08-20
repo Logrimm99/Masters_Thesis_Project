@@ -1,0 +1,605 @@
+SentiWordNet Optimization:
+
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /root/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /root/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package sentiwordnet to /root/nltk_data...
+[nltk_data]   Package sentiwordnet is already up-to-date!
+Calculating sentiment scores...
+Searching for best thresholds...
+Best thresholds found: pos ≥ 0.05, neg ≤ -0.05
+Training accuracy: 0.4484
+Inference runtime (eval set): 100.86 seconds
+
+
+SentiWordNet Best Parameters:
+
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /root/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package omw-1.4 to /root/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package sentiwordnet to /root/nltk_data...
+[nltk_data]   Package sentiwordnet is already up-to-date!
+Calculating sentiment scores...
+Using manually set thresholds: pos ≥ 0.05, neg ≤ -0.05
+Inference runtime (eval set): 98.77 seconds
+
+
+Vader Optimization:
+
+Searching for best thresholds...
+Best thresholds found: pos ≥ 0.05, neg ≤ -0.05
+Training accuracy: 0.5126
+Inference runtime (eval set): 7.84 seconds
+Total runtime: 8.11 seconds
+
+Vader Best Parameters:
+
+Using manually set thresholds: pos ≥ 0.05, neg ≤ -0.05
+Inference runtime (eval set): 6.20 seconds
+Total runtime: 6.48 seconds
+
+
+Vader_SentiWordNets Optimization:
+
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /root/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package omw-1.4 to /root/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package sentiwordnet to /root/nltk_data...
+[nltk_data]   Package sentiwordnet is already up-to-date!
+Computing training scores...
+Searching for best thresholds...
+Best thresholds found: pos ≥ 0.05, neg ≤ -0.05
+Training accuracy: 0.4897
+Computing evaluation scores...
+Inference runtime (eval set): 88.30 seconds
+
+
+Vader_SentiWordNets Best Parameters:
+
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /root/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+[nltk_data] Downloading package omw-1.4 to /root/nltk_data...
+[nltk_data]   Package omw-1.4 is already up-to-date!
+[nltk_data] Downloading package wordnet to /root/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+[nltk_data] Downloading package sentiwordnet to /root/nltk_data...
+[nltk_data]   Package sentiwordnet is already up-to-date!
+Computing training scores...
+Using manually set thresholds: pos ≥ 0.05, neg ≤ -0.05
+Computing evaluation scores...
+Inference runtime (eval set): 88.62 seconds
+
+
+Naive Bayes Optimization:
+
+Best Parameters from Grid Search: {'nb__alpha': 1.5, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 3)}
+Training time: 68.38 seconds
+Testing time: 0.37 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.65      0.73      0.69      3600
+           1       0.51      0.46      0.48      3600
+           2       0.67      0.66      0.66      3600
+
+    accuracy                           0.61     10800
+   macro avg       0.61      0.62      0.61     10800
+weighted avg       0.61      0.61      0.61     10800
+
+
+Naive Bayes Best Parameters:
+
+Using manually set best parameters: {'nb__alpha': 1.5, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 3)}
+Training time: 6.71 seconds
+Testing time: 0.53 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.65      0.73      0.69      3600
+           1       0.51      0.46      0.48      3600
+           2       0.67      0.66      0.66      3600
+
+    accuracy                           0.61     10800
+   macro avg       0.61      0.62      0.61     10800
+weighted avg       0.61      0.61      0.61     10800
+
+
+SVM Optimization:
+
+Best Parameters from Grid Search: {'svm__C': 1, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 3)}
+Training time: 134.09 seconds
+Testing time: 0.37 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.68      0.73      0.70      3600
+           1       0.53      0.45      0.49      3600
+           2       0.64      0.69      0.66      3600
+
+    accuracy                           0.62     10800
+   macro avg       0.62      0.62      0.62     10800
+weighted avg       0.62      0.62      0.62     10800
+
+
+SVM Best Parameters:
+
+Using manually set best parameters: {'svm__C': 1, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 3)}
+Training time: 10.35 seconds
+Testing time: 0.47 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.68      0.73      0.70      3600
+           1       0.53      0.45      0.49      3600
+           2       0.64      0.69      0.66      3600
+
+    accuracy                           0.62     10800
+   macro avg       0.62      0.62      0.62     10800
+weighted avg       0.62      0.62      0.62     10800
+
+
+Logistic Regression Optimization:
+
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/sklearn/linear_model/_sag.py:348: ConvergenceWarning: The max_iter was reached which means the coef_ did not converge
+  warnings.warn(
+Best Parameters from Grid Search: {'logreg__C': 1, 'logreg__penalty': 'l2', 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+Training time: 11364.30 seconds
+Testing time: 0.24 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.68      0.71      0.69      3600
+           1       0.53      0.48      0.50      3600
+           2       0.66      0.68      0.67      3600
+
+    accuracy                           0.62     10800
+   macro avg       0.62      0.62      0.62     10800
+weighted avg       0.62      0.62      0.62     10800
+
+
+Logistic Regression Best Parameters:
+
+Using manually set best parameters: {'logreg__C': 1, 'logreg__penalty': 'l2', 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+Training time: 6.95 seconds
+Testing time: 0.36 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.68      0.71      0.69      3600
+           1       0.53      0.48      0.50      3600
+           2       0.66      0.68      0.67      3600
+
+    accuracy                           0.62     10800
+   macro avg       0.62      0.62      0.62     10800
+weighted avg       0.62      0.62      0.62     10800
+
+
+Random Forest Optimization:
+
+/usr/local/lib/python3.11/dist-packages/joblib/externals/loky/process_executor.py:782: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+Best Parameters from Grid Search: {'rf__max_depth': None, 'rf__min_samples_split': 5, 'rf__n_estimators': 200, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+Training time: 16858.85 seconds
+Testing time: 2.86 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.67      0.70      0.69      3600
+           1       0.54      0.49      0.52      3600
+           2       0.65      0.68      0.66      3600
+
+    accuracy                           0.62     10800
+   macro avg       0.62      0.62      0.62     10800
+weighted avg       0.62      0.62      0.62     10800
+
+
+Random Forest Best Parameters:
+
+Using manually set best parameters: {'rf__max_depth': None, 'rf__min_samples_split': 5, 'rf__n_estimators': 200, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}
+Training time: 1028.38 seconds
+Testing time: 2.95 seconds
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.67      0.70      0.69      3600
+           1       0.54      0.49      0.52      3600
+           2       0.65      0.68      0.66      3600
+
+    accuracy                           0.62     10800
+   macro avg       0.62      0.62      0.62     10800
+weighted avg       0.62      0.62      0.62     10800
+
+
+BERT Optimization:
+
+2025-08-10 12:45:41.463266: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-08-10 12:45:41.481709: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1754829941.502592    2224 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1754829941.509025    2224 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1754829941.525351    2224 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754829941.525379    2224 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754829941.525383    2224 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754829941.525385    2224 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-08-10 12:45:41.530106: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Starting hyperparameter search...
+Testing config: epochs=3, lr=2e-05, freeze_bert=True, max_len=128
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+I0000 00:00:1754829962.451284    2224 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38546 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:00:04.0, compute capability: 8.0
+pytorch_model.bin: 100% 268M/268M [00:01<00:00, 144MB/s]
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+I0000 00:00:1754829976.160352    2373 cuda_dnn.cc:529] Loaded cuDNN version 90300
+270/270 ━━━━━━━━━━━━━━━━━━━━ 5s 16ms/step
+→ Validation Accuracy: 0.5860
+New best config: (3, 2e-05, True, 128)
+Testing config: epochs=3, lr=2e-05, freeze_bert=True, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5883
+New best config: (3, 2e-05, True, 256)
+Testing config: epochs=3, lr=2e-05, freeze_bert=True, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.5816
+Testing config: epochs=3, lr=2e-05, freeze_bert=False, max_len=128
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 6s 16ms/step
+→ Validation Accuracy: 0.5824
+Testing config: epochs=3, lr=2e-05, freeze_bert=False, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5831
+Testing config: epochs=3, lr=2e-05, freeze_bert=False, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.5833
+Testing config: epochs=3, lr=3e-05, freeze_bert=True, max_len=128
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 5s 16ms/step
+→ Validation Accuracy: 0.5839
+Testing config: epochs=3, lr=3e-05, freeze_bert=True, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5854
+Testing config: epochs=3, lr=3e-05, freeze_bert=True, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.5847
+Testing config: epochs=3, lr=3e-05, freeze_bert=False, max_len=128
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 5s 16ms/step
+→ Validation Accuracy: 0.5884
+New best config: (3, 3e-05, False, 128)
+Testing config: epochs=3, lr=3e-05, freeze_bert=False, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5838
+Testing config: epochs=3, lr=3e-05, freeze_bert=False, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.5872
+Testing config: epochs=5, lr=2e-05, freeze_bert=True, max_len=128
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 6s 16ms/step
+→ Validation Accuracy: 0.5978
+New best config: (5, 2e-05, True, 128)
+Testing config: epochs=5, lr=2e-05, freeze_bert=True, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5918
+Testing config: epochs=5, lr=2e-05, freeze_bert=True, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.5900
+Testing config: epochs=5, lr=2e-05, freeze_bert=False, max_len=128
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 5s 16ms/step
+→ Validation Accuracy: 0.5863
+Testing config: epochs=5, lr=2e-05, freeze_bert=False, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5912
+Testing config: epochs=5, lr=2e-05, freeze_bert=False, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.5935
+Testing config: epochs=5, lr=3e-05, freeze_bert=True, max_len=128
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 5s 16ms/step
+→ Validation Accuracy: 0.5956
+Testing config: epochs=5, lr=3e-05, freeze_bert=True, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5925
+Testing config: epochs=5, lr=3e-05, freeze_bert=True, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.6058
+New best config: (5, 3e-05, True, 512)
+Testing config: epochs=5, lr=3e-05, freeze_bert=False, max_len=128
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 5s 16ms/step
+→ Validation Accuracy: 0.6003
+Testing config: epochs=5, lr=3e-05, freeze_bert=False, max_len=256
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 10s 33ms/step
+→ Validation Accuracy: 0.5910
+Testing config: epochs=5, lr=3e-05, freeze_bert=False, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+270/270 ━━━━━━━━━━━━━━━━━━━━ 21s 72ms/step
+→ Validation Accuracy: 0.5918
+Best config: epochs=5, lr=3e-05, freeze_bert=True, max_len=512
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_layer_norm.bias', 'vocab_layer_norm.weight', 'vocab_transform.weight', 'vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+Epoch 1/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 123s 109ms/step - accuracy: 0.4569 - loss: 1.0269 - val_accuracy: 0.5525 - val_loss: 0.9128
+Epoch 2/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 117s 108ms/step - accuracy: 0.5684 - loss: 0.8964 - val_accuracy: 0.5711 - val_loss: 0.8850
+Epoch 3/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 117s 108ms/step - accuracy: 0.5806 - loss: 0.8721 - val_accuracy: 0.5797 - val_loss: 0.8738
+Epoch 4/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 117s 108ms/step - accuracy: 0.5959 - loss: 0.8534 - val_accuracy: 0.5877 - val_loss: 0.8660
+Epoch 5/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 117s 108ms/step - accuracy: 0.5986 - loss: 0.8466 - val_accuracy: 0.5829 - val_loss: 0.8751
+Training time: 589.45 seconds
+338/338 ━━━━━━━━━━━━━━━━━━━━ 27s 78ms/step
+Testing time: 27.52 seconds
+Results saved to '../model_predictions/allSources/bert_output.csv'
+
+
+BERT Best Parameters:
+
+2025-08-10 16:56:51.517592: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-08-10 16:56:51.537631: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1754845011.558762    2945 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1754845011.565235    2945 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1754845011.583360    2945 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754845011.583390    2945 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754845011.583394    2945 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1754845011.583397    2945 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-08-10 16:56:51.588267: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+tokenizer_config.json: 100% 48.0/48.0 [00:00<00:00, 427kB/s]
+vocab.txt: 100% 232k/232k [00:00<00:00, 2.05MB/s]
+tokenizer.json: 100% 466k/466k [00:00<00:00, 9.86MB/s]
+config.json: 100% 483/483 [00:00<00:00, 4.65MB/s]
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+I0000 00:00:1754845044.631953    2945 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 38546 MB memory:  -> device: 0, name: NVIDIA A100-SXM4-40GB, pci bus id: 0000:00:04.0, compute capability: 8.0
+pytorch_model.bin: 100% 268M/268M [00:01<00:00, 147MB/s]
+TensorFlow and JAX classes are deprecated and will be removed in Transformers v5. We recommend migrating to PyTorch classes or pinning your version of Transformers.
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFDistilBertModel: ['vocab_transform.bias', 'vocab_projector.weight', 'vocab_projector.bias', 'vocab_transform.weight', 'vocab_layer_norm.bias', 'vocab_layer_norm.weight']
+- This IS expected if you are initializing TFDistilBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFDistilBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFDistilBertModel were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFDistilBertModel for predictions without further training.
+Epoch 1/5
+I0000 00:00:1754845060.118913    3154 cuda_dnn.cc:529] Loaded cuDNN version 90300
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 123s 108ms/step - accuracy: 0.4549 - loss: 1.0248 - val_accuracy: 0.5529 - val_loss: 0.9078
+Epoch 2/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 115s 106ms/step - accuracy: 0.5633 - loss: 0.8971 - val_accuracy: 0.5758 - val_loss: 0.8847
+Epoch 3/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 115s 106ms/step - accuracy: 0.5847 - loss: 0.8678 - val_accuracy: 0.5789 - val_loss: 0.8767
+Epoch 4/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 115s 107ms/step - accuracy: 0.5950 - loss: 0.8530 - val_accuracy: 0.5843 - val_loss: 0.8689
+Epoch 5/5
+1080/1080 ━━━━━━━━━━━━━━━━━━━━ 115s 107ms/step - accuracy: 0.6103 - loss: 0.8329 - val_accuracy: 0.5884 - val_loss: 0.8636
+Training time: 582.81 seconds
+338/338 ━━━━━━━━━━━━━━━━━━━━ 27s 77ms/step
+Testing time: 27.26 seconds
+Results saved to '../model_predictions/allSources/bert_output.csv'
+

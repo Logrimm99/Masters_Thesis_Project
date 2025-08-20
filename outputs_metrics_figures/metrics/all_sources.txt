@@ -1,0 +1,103 @@
+=== Metrics for: bert_output.csv ===
+              Metric  Score
+0           Accuracy  0.595
+1  Precision (Macro)  0.596
+2     Recall (Macro)  0.595
+3   F1-Score (Macro)  0.595
+4        FPR (Macro)  0.202
+
+Class-wise recall vs. prediction distribution:
+Negative: 67.03% correct / 33.93% predicted | Correct among Predictions: 65.86% | Ratio: 1.02 | Efficiency Score: 65.86 | Weighted Efficiency: 22.34 | Balanced F1: 45.05
+Neutral: 50.06% correct / 33.98% predicted | Correct among Predictions: 49.10% | Ratio: 1.02 | Efficiency Score: 49.10 | Weighted Efficiency: 16.69 | Balanced F1: 40.48
+Positive: 61.42% correct / 32.09% predicted | Correct among Predictions: 63.79% | Ratio: 0.96 | Efficiency Score: 63.79 | Weighted Efficiency: 20.47 | Balanced F1: 42.16
+
+=== Metrics for: logreg_output.csv ===
+              Metric  Score
+0           Accuracy  0.625
+1  Precision (Macro)  0.620
+2     Recall (Macro)  0.625
+3   F1-Score (Macro)  0.622
+4        FPR (Macro)  0.188
+
+Class-wise recall vs. prediction distribution:
+Negative: 71.50% correct / 35.30% predicted | Correct among Predictions: 67.52% | Ratio: 1.06 | Efficiency Score: 67.52 | Weighted Efficiency: 23.83 | Balanced F1: 47.26
+Neutral: 47.67% correct / 30.00% predicted | Correct among Predictions: 52.96% | Ratio: 0.90 | Efficiency Score: 52.96 | Weighted Efficiency: 15.89 | Balanced F1: 36.82
+Positive: 68.22% correct / 34.70% predicted | Correct among Predictions: 65.53% | Ratio: 1.04 | Efficiency Score: 65.53 | Weighted Efficiency: 22.74 | Balanced F1: 46.01
+
+=== Metrics for: naive_bayes_output.csv ===
+              Metric  Score
+0           Accuracy  0.615
+1  Precision (Macro)  0.610
+2     Recall (Macro)  0.615
+3   F1-Score (Macro)  0.611
+4        FPR (Macro)  0.192
+
+Class-wise recall vs. prediction distribution:
+Negative: 72.61% correct / 37.25% predicted | Correct among Predictions: 64.98% | Ratio: 1.12 | Efficiency Score: 64.98 | Weighted Efficiency: 24.20 | Balanced F1: 49.24
+Neutral: 45.78% correct / 29.74% predicted | Correct among Predictions: 51.31% | Ratio: 0.89 | Efficiency Score: 51.31 | Weighted Efficiency: 15.26 | Balanced F1: 36.06
+Positive: 66.11% correct / 33.01% predicted | Correct among Predictions: 66.76% | Ratio: 0.99 | Efficiency Score: 66.76 | Weighted Efficiency: 22.04 | Balanced F1: 44.03
+
+=== Metrics for: random_forest_output.csv ===
+              Metric  Score
+0           Accuracy  0.625
+1  Precision (Macro)  0.621
+2     Recall (Macro)  0.625
+3   F1-Score (Macro)  0.622
+4        FPR (Macro)  0.188
+
+Class-wise recall vs. prediction distribution:
+Negative: 70.11% correct / 34.71% predicted | Correct among Predictions: 67.32% | Ratio: 1.04 | Efficiency Score: 67.32 | Weighted Efficiency: 23.37 | Balanced F1: 46.44
+Neutral: 49.00% correct / 30.04% predicted | Correct among Predictions: 54.38% | Ratio: 0.90 | Efficiency Score: 54.38 | Weighted Efficiency: 16.33 | Balanced F1: 37.24
+Positive: 68.39% correct / 35.25% predicted | Correct among Predictions: 64.67% | Ratio: 1.06 | Efficiency Score: 64.67 | Weighted Efficiency: 22.80 | Balanced F1: 46.52
+
+=== Metrics for: sentiwordnet_output.csv ===
+              Metric  Score
+0           Accuracy  0.454
+1  Precision (Macro)  0.489
+2     Recall (Macro)  0.454
+3   F1-Score (Macro)  0.450
+4        FPR (Macro)  0.273
+
+Class-wise recall vs. prediction distribution:
+Negative: 29.75% correct / 16.40% predicted | Correct among Predictions: 60.47% | Ratio: 0.49 | Efficiency Score: 60.47 | Weighted Efficiency: 9.92 | Balanced F1: 21.14
+Neutral: 51.94% correct / 46.32% predicted | Correct among Predictions: 37.38% | Ratio: 1.39 | Efficiency Score: 37.38 | Weighted Efficiency: 17.31 | Balanced F1: 48.97
+Positive: 54.56% correct / 37.28% predicted | Correct among Predictions: 48.78% | Ratio: 1.12 | Efficiency Score: 48.78 | Weighted Efficiency: 18.19 | Balanced F1: 44.29
+
+=== Metrics for: svm_output.csv ===
+              Metric  Score
+0           Accuracy  0.623
+1  Precision (Macro)  0.616
+2     Recall (Macro)  0.622
+3   F1-Score (Macro)  0.618
+4        FPR (Macro)  0.189
+
+Class-wise recall vs. prediction distribution:
+Negative: 72.58% correct / 35.62% predicted | Correct among Predictions: 67.92% | Ratio: 1.07 | Efficiency Score: 67.92 | Weighted Efficiency: 24.19 | Balanced F1: 47.79
+Neutral: 45.14% correct / 28.36% predicted | Correct among Predictions: 53.05% | Ratio: 0.85 | Efficiency Score: 53.05 | Weighted Efficiency: 15.05 | Balanced F1: 34.84
+Positive: 69.03% correct / 36.02% predicted | Correct among Predictions: 63.88% | Ratio: 1.08 | Efficiency Score: 63.88 | Weighted Efficiency: 23.01 | Balanced F1: 47.34
+
+=== Metrics for: vader_output.csv ===
+              Metric  Score
+0           Accuracy  0.518
+1  Precision (Macro)  0.554
+2     Recall (Macro)  0.518
+3   F1-Score (Macro)  0.492
+4        FPR (Macro)  0.241
+
+Class-wise recall vs. prediction distribution:
+Negative: 49.31% correct / 24.39% predicted | Correct among Predictions: 67.39% | Ratio: 0.73 | Efficiency Score: 67.39 | Weighted Efficiency: 16.44 | Balanced F1: 32.63
+Neutral: 22.89% correct / 14.21% predicted | Correct among Predictions: 53.68% | Ratio: 0.43 | Efficiency Score: 53.68 | Weighted Efficiency: 7.63 | Balanced F1: 17.54
+Positive: 83.31% correct / 61.40% predicted | Correct among Predictions: 45.23% | Ratio: 1.84 | Efficiency Score: 45.23 | Weighted Efficiency: 27.77 | Balanced F1: 70.69
+
+=== Metrics for: vader_sentiwordnet_output.csv ===
+              Metric  Score
+0           Accuracy  0.494
+1  Precision (Macro)  0.523
+2     Recall (Macro)  0.494
+3   F1-Score (Macro)  0.492
+4        FPR (Macro)  0.253
+
+Class-wise recall vs. prediction distribution:
+Negative: 38.00% correct / 19.02% predicted | Correct among Predictions: 66.60% | Ratio: 0.57 | Efficiency Score: 66.60 | Weighted Efficiency: 12.67 | Balanced F1: 25.35
+Neutral: 46.81% correct / 38.71% predicted | Correct among Predictions: 40.30% | Ratio: 1.16 | Efficiency Score: 40.30 | Weighted Efficiency: 15.60 | Balanced F1: 42.38
+Positive: 63.33% correct / 42.27% predicted | Correct among Predictions: 49.95% | Ratio: 1.27 | Efficiency Score: 49.95 | Weighted Efficiency: 21.11 | Balanced F1: 50.70
