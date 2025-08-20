@@ -1,0 +1,22 @@
+# Core packages
+pandas
+numpy
+
+# Scikit-learn ecosystem
+scikit-learn
+
+# Deep learning (TF + Transformers)
+tensorflow>=2.11.0
+transformers>=4.31.0
+
+# NLP tools
+nltk
+emoji
+vaderSentiment
+pyspellchecker
+langdetect
+
+# Utility tools
+tqdm
+matplotlib
+seaborn
