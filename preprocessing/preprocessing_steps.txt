@@ -16,6 +16,6 @@ Steps to generate the final unified and trimmed Datasets:
 6. Copy the fast datasets into the 'labeld_data' folder
 7. Execute 'clean_text/create_subsets.py'
 8. Execute 'clean_text/clean_text.py'
-9. Execute 'noise_class-imbalance_no-paraphrasing.py'
+9. Execute 'handle_class_imbalances.py'
 10. Execute 'unify_datasets.py'
 11. Execute 'remove_unnecessary_columns.py'
