@@ -10,7 +10,7 @@ FILENAMES = [
     'slow_train.csv', 'slow_test.csv',
     'all_sources_train.csv', 'all_sources_test.csv'
 ]
-COLUMNS_TO_KEEP = ['text', 'sentiment', 'source', 'dataset', 'datasource']
+COLUMNS_TO_KEEP = ['text', 'sentiment', 'source', 'datasource']
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -20,5 +20,6 @@ for filename in FILENAMES:
     df_trimmed = df[COLUMNS_TO_KEEP]
     output_path = os.path.join(OUTPUT_DIR, filename)
     df_trimmed.to_csv(output_path, index=False)
+
 
 print("Trimmed datasets saved successfully.")
