@@ -30,7 +30,7 @@ lemmatizer = WordNetLemmatizer()
 spell = SpellChecker()
 
 def remove_noise(df):
-    # --- Step 1: Clean & Filter Data ---
+    # Clean & Filter Data
     valid_labels = [0, 1, 2]
     df = df[df["sentiment"].isin(valid_labels)]
     df = df[df["text"].notnull() & (df["text"].str.strip() != "")]
@@ -49,15 +49,15 @@ def clean_text(text: str) -> str:
     if pd.isna(text):
         return ""
     try:
-        # 1) Emoji → words (so they survive token filtering)
+        # Transform emojis to words
         t = emoji.demojize(str(text), language="en")
         t = t.replace(":", " ").replace("_", " ")
 
-        # 2) Lower + remove URLs + punctuation→space (keep word boundaries)
+        # Transform to lowercase + remove URLs + punctuation => space (keep word boundaries)
         t = t.lower()
         t = re.sub(r'http\S+|www\S+', ' ', t)
         t = re.sub(r"[^\w\s]", " ", t)
-        # 3) Tokenize
+        # Tokenize
         tokens = nltk.word_tokenize(t)
         cleaned = []
         for w in tokens:
@@ -66,6 +66,7 @@ def clean_text(text: str) -> str:
                 # OPTIONAL: comment out next two lines to activate spell-correction
                 # corrected = spell.correction(w) or w
                 # w = corrected
+                # Lemmatize the tokens
                 cleaned.append(
                     lemmatizer.lemmatize(w))
 
