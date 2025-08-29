@@ -61,7 +61,7 @@ def clean_text(text: str) -> str:
         tokens = nltk.word_tokenize(t)
         cleaned = []
         for w in tokens:
-            # keep alphabetic tokens only
+            # Keep alphabetic tokens only
             if w.isalpha() and w not in stop_words:
                 # OPTIONAL: comment out next two lines to activate spell-correction
                 # corrected = spell.correction(w) or w
