@@ -10,6 +10,7 @@ def classify_scores(scores, low_thresh, high_thresh):
     return scores.apply(lambda x: 0 if x <= low_thresh else (1 if x <= high_thresh else 2))
 
 def evaluate_all_breakpoints(scores, step=0.01):
+    # Evaluate all breakpoints combinations
     results = []
     for low in np.arange(0.1, 0.98, step):
         for high in np.arange(low + step, 0.99, step):
@@ -30,11 +31,13 @@ def evaluate_all_breakpoints(scores, step=0.01):
     return results
 
 def get_best(results):
+    # Select the breakpoint combination with the lowest imbalance
     imbalance = [r["imbalance"] for r in results]
     min_idx = np.argmin(imbalance)
     return results[min_idx]
 
 def process_file(filepath, step=0.01):
+    # Read in the file
     df = pd.read_csv(filepath)
     if score_col not in df.columns:
         raise ValueError(f"Missing '{score_col}' column in {filepath}")
@@ -45,10 +48,11 @@ def process_file(filepath, step=0.01):
 
     print(f"\nProcessing {dataset_name} — total rows: {len(scores)}")
 
+    # Evaluate breakpoints for the current dataset
     results = evaluate_all_breakpoints(scores, step)
     best = get_best(results)
 
-    # Re-apply the best thresholds to confirm the actual distribution
+    # Re-apply the best thresholds to determine the final distribution
     labeled = classify_scores(scores, best['low'], best['high'])
     actual_dist = labeled.value_counts(normalize=True).sort_index().to_dict()
 
@@ -61,6 +65,7 @@ def process_file(filepath, step=0.01):
         print(f"{['Negative','Neutral','Positive'][i]}: {pct:.2%} ", end="")
     print("]")
     print(f"  Total Deviation from Perfect Balance: {best['imbalance']:.4f}")
+
 
 def main(data_dir="datasets", step=0.01):
     filepaths = glob(os.path.join(data_dir, "*.csv"))

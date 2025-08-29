@@ -5,6 +5,7 @@ input_dir = "../../intermediate_datasets/datasets_percentages"
 output_dir = "../../intermediate_datasets/labeled_data"
 
 def assign_sentiment(value, low, high):
+    # Assign sentiments based on the percentage and given thresholds
     if value <= low:
         return 0
     elif value <= high:
@@ -13,6 +14,7 @@ def assign_sentiment(value, low, high):
         return 2
 
 def process_file(filepath, output_dir, low_thresh, high_thresh):
+    # Transform percentages to sentiments
     df = pd.read_csv(filepath)
 
     if "ratings_percentage" not in df.columns:
@@ -22,7 +24,6 @@ def process_file(filepath, output_dir, low_thresh, high_thresh):
     df["sentiment"] = df["ratings_percentage"].apply(lambda x: assign_sentiment(x, low_thresh, high_thresh))
 
     output_path = os.path.join(output_dir, os.path.basename(filepath))
-    # df.to_csv(output_path, index=False)
     df.to_csv(output_path, index=False, encoding="latin1")
     print(f"Saved labeled data to: {output_path}")
 

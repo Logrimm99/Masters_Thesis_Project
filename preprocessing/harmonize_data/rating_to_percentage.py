@@ -8,7 +8,7 @@ input_dir = "../../original_datasets"
 output_dir = "../../intermediate_datasets/datasets_percentages"
 
 def parse_rating(value, rating_type):
-    """Converts various rating formats to a percentage between 0 and 1."""
+    "Converts various rating formats to a percentage between 0 and 1."
     if pd.isnull(value):
         return None
 
