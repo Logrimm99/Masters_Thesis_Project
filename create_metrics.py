@@ -5,6 +5,8 @@ from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, r
 import numpy as np
 import os
 
+
+# Select the folder for which metrics should be generated
 folder_path = 'model_predictions//allSources'
 # folder_path = 'model_predictions//fast'
 # folder_path = 'model_predictions//mediumFast'
@@ -21,7 +23,7 @@ def generateMetrics(input_file, file_name):
     y_true = df['sentiment']
     y_pred = df['predicted_class']
 
-    # Metrics (using macro-average)
+    # Calculate general metrics (using macro-average)
     accuracy = accuracy_score(y_true, y_pred)
     precision = precision_score(y_true, y_pred, average='macro', zero_division=0)
     recall = recall_score(y_true, y_pred, average='macro', zero_division=0)
@@ -41,7 +43,7 @@ def generateMetrics(input_file, file_name):
     })
     print(results)
 
-    # Per-class statistics
+    # Calculate and print per-class statistics
     print("\nClass-wise recall vs. prediction distribution:")
     class_labels = ['Negative', 'Neutral', 'Positive']
     class_ids = [0, 1, 2]
