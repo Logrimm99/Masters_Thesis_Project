@@ -37,6 +37,7 @@ os.makedirs(SAVE_DIR, exist_ok=True)
 
 
 def load_datasets(file_dict):
+    # Read in a dataset
     datasets = {}
     for file, name in file_dict.items():
         df = pd.read_csv(file)
@@ -46,6 +47,7 @@ def load_datasets(file_dict):
 
 
 def sample_balanced_per_class(datasets, target_total, source_label):
+    # The target numbers of entries that should be collected
     per_class_target = target_total // len(TARGET_CLASSES)
     per_class_per_dataset = per_class_target // len(datasets)
 

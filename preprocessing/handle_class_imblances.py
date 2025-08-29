@@ -10,7 +10,7 @@ input_folder = '../intermediate_datasets/cleaned_texts'
 output_folder = '../intermediate_datasets/handle_class_imbalances'
 
 def handleClassImbalances(df, output_path):
-    # --- Step 1: Mark original values ---
+    # Mark original values
     valid_labels = [0, 1, 2]
 
     df["source"] = "original"
@@ -18,7 +18,7 @@ def handleClassImbalances(df, output_path):
     print("Class distribution before oversampling:")
     print(df["sentiment"].value_counts())
 
-    # --- Step 2: Oversample Without Paraphrasing ---
+    # Oversample Without Paraphrasing
     majority_size = df["sentiment"].value_counts().max()
     dfs = []
 
@@ -31,11 +31,11 @@ def handleClassImbalances(df, output_path):
             subset = pd.concat([subset, oversampled])
         dfs.append(subset)
 
-    # --- Step 3: Combine, Shuffle, Save ---
+    # Combine, Shuffle, Save
     df_balanced = pd.concat(dfs).sample(frac=1, random_state=42).reset_index(drop=True)
     df_balanced.to_csv(output_path, index=False)
 
-    # --- Step 4: Reporting ---
+    # Reporting
     print("\nClass distribution after oversampling:")
     print(df_balanced["sentiment"].value_counts())
     print("\nSource distribution:")

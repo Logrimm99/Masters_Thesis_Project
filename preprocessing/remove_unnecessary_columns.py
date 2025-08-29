@@ -4,12 +4,14 @@ import os
 # CONFIGURATION
 INPUT_DIR = '../intermediate_datasets/unified_datasets'
 OUTPUT_DIR = '../unified_datasets'
+# The files that should be reduced
 FILENAMES = [
     'fast_train.csv', 'fast_test.csv',
     'medium_train.csv', 'medium_test.csv',
     'slow_train.csv', 'slow_test.csv',
     'all_sources_train.csv', 'all_sources_test.csv'
 ]
+# The colums that should remain in the files
 COLUMNS_TO_KEEP = ['text', 'sentiment', 'source', 'datasource']
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
